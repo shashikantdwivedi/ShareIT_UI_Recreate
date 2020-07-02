@@ -13,7 +13,7 @@ class _SideBarState extends State<SideBar>
   AnimationController _animationController;
   StreamController<bool> ifsidebaropenStremController;
   Stream<bool> issidebarsteam;
-  StreamSink isSidebarOpenedSink;
+  StreamSink<bool> isSidebarOpenedSink;
 
   final _animationDuraion = const Duration(milliseconds: 500);
 
