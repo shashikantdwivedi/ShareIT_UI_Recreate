@@ -39,11 +39,15 @@ class _SideBarState extends State<SideBar>
     final isAnimationCompleted = animationStatus == AnimationStatus.completed;
 
     if (isAnimationCompleted) {
-      isSidebarOpenedSink.add(true);
+       setState(){
+         isSidebarOpenedSink = true;
+       }
 
       _animationController.reverse();
     } else {
-      isSidebarOpenedSink.add(false);
+      setState(){
+         isSidebarOpenedSink = false;
+       }
 
       _animationController.forward();
     }
